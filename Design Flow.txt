@@ -1,0 +1,162 @@
+---------------------------------
+|           Person              |
+---------------------------------
+| - id: int                     |
+| - name: string                |
+| - age: int                    |
+---------------------------------
+| + Person()                    |
+| + Person(int, string, int)    |
+| + setId(int): void            |
+| + getId(): int                |
+| + setName(string): void       |
+| + getName(): string           |
+| + setAge(int): void           |
+| + getAge(): int               |
+| + output(): void              |
+| + input(): void               |
+---------------------------------
+
+---------------------------------
+|         DataInputValidation   |
+---------------------------------
+---------------------------------
+| - validate_id(int): bool      |
+| - validate_name(string): bool|
+| - validate_age(int): bool     |
+| - validate_session(int): bool|
+| - validate_gpa(double): bool |
+| - validate_code(string): bool|
+---------------------------------
+| + input_id(): int             |
+| + input_name(): string        |
+| + input_age(): int            |
+| + input_session(): int        |
+| + input_gpa(): double        |
+| + input_code(): string        |
+---------------------------------
+
+---------------------------------
+|             User              |
+---------------------------------
+| - username: string            |
+| - password: string            |
+---------------------------------
+| + User()                      |
+| + User(string, string)        |
+| + getUsername(): string       |
+| + getPassword(): string       |
+---------------------------------
+
+---------------------------------
+|         BadInputException    |
+---------------------------------
+| + what(): const char*         |
+---------------------------------
+
+---------------------------------
+|           School             |
+---------------------------------
+| - students: vector<Student*> |
+| - instructors: vector<Instructor*>|
+| - courses: vector<Course*>   |
+---------------------------------
+| + addStudent(Student*): void |
+| + viewStudents(): void        |
+| + updateStudent(Student*): void|
+| + deleteStudent(Student*): void|
+| + addInstructor(Instructor*): void|
+| + viewInstructors(): void    |
+| + updateInstructor(Instructor*): void|
+| + deleteInstructor(Instructor*): void|
+| + addCourse(Course*): void   |
+| + viewCourseDetails(Course*): void|
+| + updateCourse(Course*): void|
+| + deleteCourse(Course*): void|
+| + saveStudentsData(): void   |
+| + loadStudentsData(): void   |
+| + saveCoursesData(): void    |
+| + loadCoursesData(): void    |
+| + searchStudent(string): void|
+| + sortStudents(): void       |
+---------------------------------
+
+---------------------------------
+|           Course              |
+---------------------------------
+| - name: string                |
+| - students: vector<Student*> |
+| - instructors: vector<Instructor*>|
+---------------------------------
+| + input(): void               |
+| + addStudent(Student*): void |
+| + removeStudent(Student*): void|
+| + addInstructor(Instructor*): void|
+| + removeInstructor(Instructor*): void|
+| + getName(): string           |
+| + getStudents(): vector<Student*>|
+| + getInstructors(): vector<Instructor*>|
+---------------------------------
+
+---------------------------------
+|         Instructor           |
+---------------------------------
+| - id: int                     |
+| - name: string                |
+| - department: string          |
+---------------------------------
+| + input(): void               |
+| + output(): void              |
+| + getId(): int                |
+| + getName(): string           |
+| + getDepartment(): string     |
+---------------------------------
+
+---------------------------------
+|          Student             |
+---------------------------------
+| - id: int                     |
+| - name: string                |
+| - age: int                    |
+---------------------------------
+| + input(): void               |
+| + output(): void              |
+| + getId(): int                |
+| + getName(): string           |
+| + getAge(): int               |
+---------------------------------
+
+---------------------------------
+|       SchoolDAO              |
+---------------------------------
+| <<Interface>>                 |
+---------------------------------
+| + addStudent(Student*, Course*): void|
+| + viewStudents(Course*): void |
+| + updateStudent(Student*, Course*): void|
+| + deleteStudent(Student*, Course*): void|
+| + addInstructor(Instructor*, Course*): void|
+| + viewInstructors(Course*): void|
+| + updateInstructor(Instructor*, Course*): void|
+| + deleteInstructor(Instructor*, Course*): void|
+| + addCourse(Course*): void   |
+| + viewCourseDetails(Course*): void|
+| + updateCourse(Course*): void|
+| + deleteCourse(Course*): void|
+| + saveStudentsData(): void   |
+| + loadStudentsData(): void   |
+| + saveCoursesData(): void    |
+| + loadCoursesData(): void    |
+| + searchStudent(string): void|
+| + sortStudents(): void       |
+---------------------------------
+
+---------------------------------
+|       SchoolApplication       |
+---------------------------------
+| - s: School                   |
+| - student: Student*           |
+---------------------------------
+| + schoolManagement(): void    |
+| + run(): void                 |
+---------------------------------
